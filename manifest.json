@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Timestamp Noter",
+    "version": "1.0",
+    "description": "Create and store timestamps with notes for YouTube videos.",
+    "permissions": ["storage", "activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "assets/icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/watch*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
